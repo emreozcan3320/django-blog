@@ -1,1 +1,14 @@
-Starting new project --> django-admin startproject <proje name> 
+Starting new project --> django-admin startproject <proje name>
+Setting virtual environment --> python3 -m venv myvenv
+Running server --> python3 manage.py runserver
+
+#If another program running same port 8080
+You can learn what listening --> sudo fuser -v 8000/tcp
+And stop it --> sudo kill -15 <PID CODE for exapmle : 24437>
+More hostile way --> sudo kill -9 <PID CODE>
+
+#In python every component is an app so create a web site we create an app
+Creating app --> python3 manage.py startapp <APP NAME example:webapp>
+
+
+   
