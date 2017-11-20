@@ -1,0 +1,37 @@
+	Starting new project --> django-admin startproject <proje name>
+	Setting virtual environment --> python3 -m venv myvenv
+	Running server --> python3 manage.py runserver
+
+#If another program running same port 8080
+	You can learn what listening --> sudo fuser -v 8000/tcp
+	And stop it --> sudo kill -15 <PID CODE for exapmle : 24437>
+	More hostile way --> sudo kill -9 <PID CODE>
+
+#In python every component is an app so create a web site we create an app
+
+	Creating app --> python3 manage.py startapp <APP NAME example:webapp>
+
+/*
+-After creating an app you should add it to setting.py under INSTALLED_APPS like just 
+'webapp',
+
+-Also should add it url to urls.py for example
+url(r'^webapp',include('webapp/urls')),
+
+-BUT we didnt import include so lastly we add 
+from django.conf.urls import url, include
+
+-Our job in here is done now we pass webapp first we go to views and for returning response
+from django.http import HttpResponse
+
+-AND create an function like 
+def index(request):
+	return HttpResponse("<h1>hello world</h1>")
+
+-Now we will create a urls.py so main urls.py can call it
+from django.conf.urls import url
+from . import views
+
+urlpatterns = [
+	url(r'^$',views.index,name='index')] 
+*/   
