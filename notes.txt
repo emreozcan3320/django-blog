@@ -1,0 +1,1 @@
+Starting new project --> django-admin startproject <proje name> 
